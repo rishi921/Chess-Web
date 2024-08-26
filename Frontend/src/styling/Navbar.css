@@ -1,0 +1,76 @@
+
+/* src/Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border: 2px solid #070101; /* Add border to the navbar */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.navbar-logo-image {
+    width: 60px; /* Adjust the size of the logo image */
+    height: auto;
+    margin-right: 10px; /* Add some space between the image and the text */
+}
+
+.navbar-logo {
+    color: #200505;
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /* margin-left: 40px; */
+}
+
+.navbar-item {
+    margin-left: 40px; /* Increase the gap between navbar items */
+}
+
+
+.navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.navbar-item a:hover {
+    background-color: #f4ecec;
+    color: black;
+    border-radius: 4px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #161002;
+    color: rgb(241, 238, 238);
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #e8edeb;
+    color: black;
+}
