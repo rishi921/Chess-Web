@@ -14,6 +14,7 @@ Welcome to the Chess WEB. This project is a complete full-stack web application 
 
 
 **Win Percentage of Players**
+
 ![image](https://github.com/user-attachments/assets/cc614f4d-bb80-4427-804c-7960736bb143)
 
 
@@ -25,3 +26,7 @@ Welcome to the Chess WEB. This project is a complete full-stack web application 
 **Add Player**
 
 ![image](https://github.com/user-attachments/assets/f3383d9c-a2a3-46f7-918c-bc814a8108bd)
+
+
+**Backend**
+![image](https://github.com/user-attachments/assets/62475311-11fc-4033-a3de-d9d0fdb4a5b5)
