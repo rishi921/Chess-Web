@@ -120,37 +120,6 @@ namespace ChessWebAPI.DAO
             return playerList;
         }
 
-        public async Task<int> AddMatch(Match m)
-        {
-            string insertQuery = @$"
-                INSERT INTO Matches (player1_id, player2_id, match_date, match_level, winner_id) 
-                VALUES ('{m.Player1Id}', '{m.Player2Id}', '{m.MatchDate}', '{m.MatchLevel}', '{m.WinnerId}');
-            ";
-
-            int rowsInserted = 0;
-
-            try
-            {
-                using (_connection)
-                {
-                    await _connection.OpenAsync();
-
-                    using var insertCommand = new NpgsqlCommand(insertQuery, _connection)
-                    {
-                        CommandType = CommandType.Text
-                    };
-
-                    rowsInserted = await insertCommand.ExecuteNonQueryAsync();
-                }
-            }
-            catch (NpgsqlException e)
-            {
-                Console.WriteLine($"------Exception-----: {e.Message}");
-            }
-
-            return rowsInserted;
-        }
-
         public async Task<List<PlayerWinPercentage>> GetPlayerWinPercentage()
         {
             string query = @"
@@ -201,6 +170,38 @@ namespace ChessWebAPI.DAO
             }
 
             return playerList;
+        }
+
+
+        public async Task<int> AddMatch(Match m)
+        {
+            string insertQuery = @$"
+                INSERT INTO Matches (player1_id, player2_id, match_date, match_level, winner_id) 
+                VALUES ('{m.Player1Id}', '{m.Player2Id}', '{m.MatchDate}', '{m.MatchLevel}', '{m.WinnerId}');
+            ";
+
+            int rowsInserted = 0;
+
+            try
+            {
+                using (_connection)
+                {
+                    await _connection.OpenAsync();
+
+                    using var insertCommand = new NpgsqlCommand(insertQuery, _connection)
+                    {
+                        CommandType = CommandType.Text
+                    };
+
+                    rowsInserted = await insertCommand.ExecuteNonQueryAsync();
+                }
+            }
+            catch (NpgsqlException e)
+            {
+                Console.WriteLine($"------Exception-----: {e.Message}");
+            }
+
+            return rowsInserted;
         }
     }
 }

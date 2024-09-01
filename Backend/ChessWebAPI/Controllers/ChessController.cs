@@ -28,24 +28,6 @@ namespace ChessWebAPI.Controllers
             return Ok(players);
         }
 
-
-
-        [HttpPost("AddMatch", Name = "AddMatch")]
-        public async Task<ActionResult<Match>> AddMatch(Match product)
-        {
-            if (product == null)
-            {
-                return BadRequest("Product Not Found");
-            }
-            else
-            {
-                int value = await _chessDAO.AddMatch(product);
-
-                return Ok(value);
-            }
-
-        }
-
         [HttpGet("GetPlayerWinPercentageByAverageOfWins", Name = "GetPlayerWinPercentageByAverageOfWins")]
         public async Task<ActionResult<List<PlayerWinPercentage>>> GetPlayerWinPercentageByAverageOfWins()
         {
@@ -68,6 +50,23 @@ namespace ChessWebAPI.Controllers
             }
 
             return Ok(players);
+        }
+
+
+        [HttpPost("AddMatch", Name = "AddMatch")]
+        public async Task<ActionResult<Match>> AddMatch(Match product)
+        {
+            if (product == null)
+            {
+                return BadRequest("Product Not Found");
+            }
+            else
+            {
+                int value = await _chessDAO.AddMatch(product);
+
+                return Ok(value);
+            }
+
         }
 
     }
