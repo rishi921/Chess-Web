@@ -1,6 +1,6 @@
 **Chess Web**
 
-Welcome to the Chess WEB. This project is a complete full-stack web application that delivers in-depth statistics and insights on Chess matches, Player Details, Win Percentage of Players, Average Wins also you can add player. The dashboard is powered by React for the frontend, .NET Core for the backend, and PostgreSQL for data management.
+Welcome to the Chess WEB. This project is a complete Full-Stack web application that delivers in-depth statistics and insights on Chess matches, Player Details, Win Percentage of Players, Average Wins also you can add player. The dashboard is powered by React for the frontend, .NET Core for the backend, and PostgreSQL for data management.
 
 
 **Home Page**
